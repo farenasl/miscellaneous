@@ -1,0 +1,26 @@
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: ms-customer-massive-client-loader
+spec:
+  maxReplicas: 10
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: ms-customer-massive-client-loader
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      targetAverageUtilization: 80 
+#   - type: Resource
+#     resource:
+#       name: memory
+#       targetAverageValue: 100Mi
+  # Uncomment these lines if you create the custom packets_per_second metric and
+  # configure your app to export the metric.
+  # - type: Pods
+  #   pods:
+  #     metricName: packets_per_second
+  #     targetAverageValue: 100

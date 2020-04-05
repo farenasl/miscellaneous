@@ -1,0 +1,17 @@
+{
+    "development": {
+        "API_CUSTOMER": "https://MY_PERSONAL_DOMAIN.com/customer/",
+        "JWT_CONFIG":"/api/v1/namespaces/farenasl/secrets/secret.json",
+        "API_CATALOG":"https://MY_PERSONAL_DOMAIN.com/catalog/"
+    },
+    "beta": {
+        "API_CUSTOMER": "https://MY_PERSONAL_DOMAIN.com/customer/",
+        "JWT_CONFIG":"/api/v1/namespaces/farenasl/secrets/secret.json",
+        "API_CATALOG":"https://MY_PERSONAL_DOMAIN.com/catalog/"
+    },
+    "production": {
+        "API_CUSTOMER": "https://MY_PERSONAL_DOMAIN.com/customer/",
+        "JWT_CONFIG":"/api/v1/namespaces/farenasl/secrets/secret.json",
+        "API_CATALOG":"https://MY_PERSONAL_DOMAIN.com/catalog/"
+    }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "cust.crmg.backend.ms.customer.loader",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node ./src/config/environment/dev.js",
+    "beta": "cross-env NODE_ENV=beta node ./src/config/environment/dev.js",
+    "prod": "cross-env NODE_ENV=production node ./src/config/environment/dev.js",
+    "debug": "nodemon ./src/config/dev.js",
+    "test": "jest --coverage --runInBand --detectOpenHandles"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "~1.19.0",
+    "convert-excel-to-json": "^1.6.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "~4.17.1",
+    "http-errors": "1.7.3",
+    "jest": "^25.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.1.0",
+    "moment": "^2.24.0",
+    "multer": "^1.4.2",
+    "node-cache": "^5.1.0",
+    "nodemon": "^2.0.2",
+    "pg": "^7.18.2",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/src/app.js",
+      "!**/src/config/**",
+      "!**/src/routes/**",
+      "!**/test/**"
+    ],
+    "setupFiles": [
+      "dotenv/config",
+      "./src/config/global/config.js"
+    ],
+    "testTimeout": 100000
+  }
+}

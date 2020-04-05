@@ -1,0 +1,15 @@
+## MASKING ENVIRONMENT
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: ms-customer-massive-client-loader-env
+    labels:
+        name: ms-customer-massive-client-loader-env
+data:
+  #[KEY-CONFIG-MAP]: [VALUE]
+#------------------------------------------- MS Massive Client Loader  --------------------------------------#
+#---------------------------------------------- System Configuration  ---------------------------------------#
+  PORT: '3000'
+  DS_HOST: '127.0.0.1'
+  DS_DB: 'PERSONAL_PROJECT'
+  DS_PORT: '5432'

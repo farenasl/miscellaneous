@@ -1,0 +1,18 @@
+# Service configuration
+# You can configure the service exposure here
+# be-serviceName for BackEnd, bff-serviceName for BackendForFrontend, dal-serviceName for Data Abstraction Layer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-customer-massive-client-loader-svc
+spec:
+  type: ClusterIP
+  ports:
+  - name: tcp-srv-massive-client-loader
+    protocol: TCP
+    port: 3000
+    targetPort: 3000
+  selector:
+    app: ms-customer-massive-client-loader
+    tier: backend
