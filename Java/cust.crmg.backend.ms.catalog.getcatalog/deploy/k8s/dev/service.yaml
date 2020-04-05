@@ -1,0 +1,19 @@
+# Service configuration
+# You can configure the service exposure here
+# be-serviceName for BackEnd, bff-serviceName for BackendForFrontend, dal-serviceName for Data Abstraction Layer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-customer-getcatalog-svc-backend
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    protocol: TCP
+    port: 9095
+    targetPort: 9095
+  selector:
+    app: ms-customer-getcatalog
+    tier: backend
+

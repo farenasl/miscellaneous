@@ -1,0 +1,92 @@
+# POD - API configuration (with SQL Proxy)
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  # Normal service name
+  name: ms-customer-getcatalog
+spec:
+  # Number of replicas
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: ms-customer-getcatalog
+  template:
+    metadata:
+      labels:
+        # Normal service name and tier (same selectors as the service configuration)
+        app: ms-customer-getcatalog
+        tier: backend
+    spec:
+      imagePullSecrets:
+        - name: gcr-json-key
+      containers:
+      # Normal service name
+      - name: ms-customer-getcatalog
+        # Change to your project image (from registry)
+        image: {GCLOUD_REGISTRY_HOST}/{GCP_PROJECT_ID}/{CI_PROJECT_NAME}:{IMAGE_TAG}
+        # Always download the image from registry (dev utility)
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 9095
+        resources:
+          # You must specify requests for CPU to autoscale
+          # based on CPU utilization
+          requests:
+            cpu: "200m"
+        env:
+          - name: PORT_MS_BACKEND
+            valueFrom:
+              configMapKeyRef:
+                name: ms-customer-getcatalog-env
+                key: PORT_MS_BACKEND
+
+          - name: SYSTEM_DATASOURCE_DRIVER
+            valueFrom:
+              configMapKeyRef:
+                name: ms-customer-getcatalog-env
+                key: SYSTEM_DATASOURCE_DRIVER
+
+          - name: SYSTEM_DATASOURCE_URL
+            valueFrom:
+              configMapKeyRef:
+                name: ms-customer-getcatalog-env
+                key: SYSTEM_DATASOURCE_URL
+
+          - name: SYSTEM_DATASOURCE_USER
+            valueFrom:
+              secretKeyRef:
+                name: personalproject-cloudsql-db-credentials
+                key: username
+
+          - name: SYSTEM_DATASOURCE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: personalproject-cloudsql-db-credentials
+                key: password
+      # Change <INSTANCE_CONNECTION_NAME> here to include your GCP
+      # project, the region of your Cloud SQL instance and the name
+      # of your Cloud SQL instance. The format is
+      # $PROJECT:$REGION:$INSTANCE
+      # [START proxy_container]
+      - name: cloudsql-proxy
+        image: gcr.io/cloudsql-docker/gce-proxy:1.11
+        command: ["/cloud_sql_proxy",
+                  "-instances={INSTANCE_CONNECTION_NAME}=tcp:5432",
+                  "-credential_file=/secrets/cloudsql/credentials.json"]
+        volumeMounts:
+          - name: personalproject-cloudsql-instance-credentials
+            mountPath: /secrets/cloudsql/
+            readOnly: true
+      # [END proxy_container]
+      # [START volumes]
+      volumes:
+        - name: personalproject-cloudsql-instance-credentials
+          secret:
+            secretName: personalproject-cloudsql-instance-credentials
+      # [END volumes]

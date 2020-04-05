@@ -1,0 +1,17 @@
+## MASKING ENVIRONMENT
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name:  ms-customer-getcatalog-env
+  labels:
+    name:  ms-customer-getcatalog-env
+data:
+  #[KEY-CONFIG-MAP]: [VALUE]
+#---------------------------------------------- DAL service  ----------------------------------#
+
+#---------------------------------------- System Configuration  -------------------------------#
+  PORT_MS_BACKEND: '9095'
+  SYSTEM_DATASOURCE_DRIVER: 'org.postgresql.Driver'
+  SYSTEM_DATASOURCE_URL: 'jdbc:postgresql://127.0.0.1:5432/personalproject'
+#----------------------------------------------------------------------------------------------#
+#----------------------------------------------------------------------------------------------#
