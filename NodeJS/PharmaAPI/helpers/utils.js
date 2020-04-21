@@ -1,0 +1,21 @@
+const log = require('log4js');
+
+exports.logInfoMessage = (logger, msg) => {
+    log.getLogger(logger).info(msg);
+}
+
+exports.sendCustomizedResponse = (res, code, message) => {
+    return res.status(code).json({ statusCode: code, statusDescription: message });
+}
+
+exports.validateGetHeaders = () => {
+    return {
+      request: (req, res, next) => {
+        if ((req.query['comuna'] && req.query.comuna.length > 0)
+            ||  (req.query['company'] && req.query.company.length > 0)) {
+          next();
+        }
+        else this.sendCustomizedResponse(res, 400, 'Invalid Request!');
+      }
+    }
+  }

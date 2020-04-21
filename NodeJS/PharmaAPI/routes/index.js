@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const log = require('log4js').getLogger("routes-index");
+const express = require('express');
+const endpoints = require('../controllers');
+const utils = require('../helpers/utils');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+log.info('Setting endpoints');
+
+router.get('/healthcheck', endpoints.healthCheck.get);
+router.get('/listBy', utils.validateGetHeaders().request, endpoints.core.get);
+
+log.info('All endpoints were set successfully');
 
 module.exports = router;
