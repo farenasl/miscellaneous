@@ -15,7 +15,7 @@ exports.sendCustomizedResponse = (res, code, message) => {
 exports.validateGetHeaders = () => {
     return {
         request: (req, res, next) => {
-            if ((req.query['comuna'] && req.query.comuna.length > 0)
+            if ((req.query['location'] && req.query.location.length > 0)
                 ||  (req.query['company'] && req.query.company.length > 0)) {
             next();
             }
