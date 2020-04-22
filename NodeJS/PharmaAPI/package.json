@@ -15,5 +15,8 @@
     "morgan": "~1.9.1",
     "node-cache": "^5.1.0",
     "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "jest": "^25.4.0"
   }
 }

@@ -23,3 +23,17 @@ exports.validateGetHeaders = () => {
         }
     }
 }
+
+exports.filterResponse = (array) => {
+    array.forEach(function(element) {
+        delete element.fecha
+        delete element.local_id
+        delete element.funcionamiento_hora_apertura
+        delete element.funcionamiento_hora_cierre
+        delete element.funcionamiento_dia
+        delete element.fk_region
+        delete element.fk_comuna
+    });
+
+    return array;
+}

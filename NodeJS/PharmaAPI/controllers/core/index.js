@@ -11,14 +11,16 @@ const endpoints = {
 
         utils.logInfoMessage(logger, 'Requested filters: Comuna: ' + location + ', Nombre de local: ' + company)
 
+        // Getting cached data
         const catalog = cache.getKey('CATALOG_DATA');
 
+        // Filtering by user-params
         var result =  catalog.filter(function(pharma) {
             return pharma.comuna_nombre === (location === undefined ? pharma.comuna_nombre : location.toUpperCase())
                 && pharma.local_nombre === (company === undefined ? pharma.local_nombre : company.toUpperCase());
         });
 
-        res.status(200).json(result);
+        res.status(200).json(utils.filterResponse(result));
         utils.logInfoMessage(logger, 'Ending core!');
     }
 };
