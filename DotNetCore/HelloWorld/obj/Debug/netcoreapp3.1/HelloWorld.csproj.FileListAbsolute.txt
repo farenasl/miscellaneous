@@ -1,0 +1,12 @@
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.deps.json
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.runtimeconfig.json
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.runtimeconfig.dev.json
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.dll
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/bin/Debug/netcoreapp3.1/HelloWorld.pdb
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.csprojAssemblyReference.cache
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.csproj.CoreCompileInputs.cache
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.AssemblyInfoInputs.cache
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.AssemblyInfo.cs
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.dll
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.pdb
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/HelloWorld/obj/Debug/netcoreapp3.1/HelloWorld.genruntimeconfig.cache
