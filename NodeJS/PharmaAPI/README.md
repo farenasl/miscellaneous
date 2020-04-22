@@ -1,8 +1,8 @@
 <h1 align="center">Welcome to Pharma API 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
-  <a href="https://twitter.com/norm\_mg" target="_blank">
-    <img alt="Twitter: norm\_mg" src="https://img.shields.io/twitter/follow/norm\_mg.svg?style=social" />
+  <a href="https://twitter.com/nork\_mg" target="_blank">
+    <img alt="Twitter: nork\_mg" src="https://img.shields.io/twitter/follow/nork\_mg.svg?style=social" />
   </a>
 </p>
 
@@ -30,7 +30,7 @@ npm test
 
 👤 **Fabián Arenas L.**
 
-* Twitter: [@norm\_mg](https://twitter.com/norm\_mg)
+* Twitter: [@nork\_mg](https://twitter.com/nork\_mg)
 * Github: [@farenasl](https://github.com/farenasl)
 * LinkedIn: [@https:\/\/www.linkedin.com\/in\/fabian-arenas-loyola-0279583a\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/fabian-arenas-loyola-0279583a\/)
 
