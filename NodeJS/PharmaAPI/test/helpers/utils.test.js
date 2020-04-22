@@ -44,4 +44,18 @@ describe('Testing helpers layer', () => {
         expect(res.status.mock.calls).toEqual([[expectedRes.status]]);
         expect(res.json.mock.calls).toEqual([[expectedRes.json]]);
     });
+
+    it('Checking filterResponse function', () => {
+        let array = [{"fecha": "22-04-2020","local_id": "534","local_nombre": "TORRES MPD","comuna_nombre": "RECOLETA",
+            "localidad_nombre": "RECOLETA","local_direccion": "AVENIDA EL SALTO 2972","funcionamiento_hora_apertura": "10:30 hrs.",
+            "funcionamiento_hora_cierre": "19:30 hrs.","local_telefono": "+560225053570","local_lat": "-33.3996351",
+            "local_lng": "-70.62894990000001","funcionamiento_dia": "miercoles","fk_region": "7","fk_comuna": "122"}];
+        let expectedRes = [{"local_nombre": "TORRES MPD","comuna_nombre": "RECOLETA","localidad_nombre": "RECOLETA",
+        "local_direccion": "AVENIDA EL SALTO 2972","local_telefono": "+560225053570","local_lat": "-33.3996351",
+        "local_lng": "-70.62894990000001"}];
+
+        utils.filterResponse(array);
+
+        expect(array).toEqual(expectedRes);
+    });
 });
