@@ -3,31 +3,46 @@
 /**
  * Module dependencies.
  */
-
 var app = require('../app');
 var debug = require('debug')('pharmaapi:server');
 var http = require('http');
+const catalogData = require('../controllers/minsal/index');
+
+/**
+ * Initialize log4js config
+ */
+const log4js = require('log4js');
+log4js.configure('./config/log4js.json');
+const log = log4js.getLogger("startup");
 
 /**
  * Get port from environment and store in Express.
  */
-
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
-
 var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
  */
-
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+console.log('Getting all data for "Region Metropolitana" to filter it after')
+catalogData.getRegionDetails().then(x => {
+  if (x) {
+      log.info("Catalog in cache!")
+      console.log("Catalog loaded. App ready to be used! :-)")
+  } else {
+      throw new Error("Catalog was not loaded")
+      //ToDo: Load catalog from file inside of server
+  }
+}).catch(err => log.error(err));
 
 /**
  * Normalize a port into a number, string, or false.

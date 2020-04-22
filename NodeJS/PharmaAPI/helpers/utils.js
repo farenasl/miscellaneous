@@ -4,18 +4,22 @@ exports.logInfoMessage = (logger, msg) => {
     log.getLogger(logger).info(msg);
 }
 
+exports.logErrorMessage = (logger, msg) => {
+    log.getLogger(logger).error(msg);
+}
+
 exports.sendCustomizedResponse = (res, code, message) => {
     return res.status(code).json({ statusCode: code, statusDescription: message });
 }
 
 exports.validateGetHeaders = () => {
     return {
-      request: (req, res, next) => {
-        if ((req.query['comuna'] && req.query.comuna.length > 0)
-            ||  (req.query['company'] && req.query.company.length > 0)) {
-          next();
+        request: (req, res, next) => {
+            if ((req.query['comuna'] && req.query.comuna.length > 0)
+                ||  (req.query['company'] && req.query.company.length > 0)) {
+            next();
+            }
+            else this.sendCustomizedResponse(res, 400, 'Invalid Request!');
         }
-        else this.sendCustomizedResponse(res, 400, 'Invalid Request!');
-      }
     }
-  }
+}
