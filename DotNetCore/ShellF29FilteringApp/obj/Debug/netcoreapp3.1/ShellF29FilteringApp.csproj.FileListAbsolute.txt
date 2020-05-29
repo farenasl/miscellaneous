@@ -1,0 +1,12 @@
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/bin/Debug/netcoreapp3.1/ShellF29FilteringApp.deps.json
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/bin/Debug/netcoreapp3.1/ShellF29FilteringApp.runtimeconfig.json
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/bin/Debug/netcoreapp3.1/ShellF29FilteringApp.runtimeconfig.dev.json
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/bin/Debug/netcoreapp3.1/ShellF29FilteringApp.dll
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/bin/Debug/netcoreapp3.1/ShellF29FilteringApp.pdb
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/obj/Debug/netcoreapp3.1/ShellF29FilteringApp.csprojAssemblyReference.cache
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/obj/Debug/netcoreapp3.1/ShellF29FilteringApp.csproj.CoreCompileInputs.cache
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/obj/Debug/netcoreapp3.1/ShellF29FilteringApp.AssemblyInfoInputs.cache
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/obj/Debug/netcoreapp3.1/ShellF29FilteringApp.AssemblyInfo.cs
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/obj/Debug/netcoreapp3.1/ShellF29FilteringApp.dll
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/obj/Debug/netcoreapp3.1/ShellF29FilteringApp.pdb
+/Users/farenasl/Documents/Code/miscellaneous/DotNetCore/ShellF29FilteringApp/obj/Debug/netcoreapp3.1/ShellF29FilteringApp.genruntimeconfig.cache
