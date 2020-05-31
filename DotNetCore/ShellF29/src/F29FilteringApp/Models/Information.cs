@@ -6,7 +6,7 @@ namespace F29FilteringApp.models
     public class Information
     {
         public FormType FormType { get; set; }
-        public String Rut { get; set; }
+        public Rut Rut { get; set; }
         public String Period { get; set; }
         public Int64 Invoice { get; set; }
         public List<ValuePair> ValuePairs { get; set; }

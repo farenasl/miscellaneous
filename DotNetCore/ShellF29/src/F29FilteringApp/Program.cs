@@ -11,19 +11,21 @@ namespace F29FilteringApp
         static void Main(string[] args)
         {
             // Console.WriteLine("Hello World!");
-            List<Information> infoLst;
+            List<Information> infoLst, filteredList;
             List<Rut> rutLst;
 
             try
             {
                 DateTime startTime = DateTime.Now;
-                // infoLst = Process.readInformationFile("../../TestData/25-regs.txt");
-                // Console.WriteLine("File with " + infoLst.Count + " rows parsed in " + (DateTime.Now - startTime).TotalSeconds + " seconds");
+                infoLst = Process.readInformationFile("../../TestData/25-regs.txt");
+                Console.WriteLine("File with " + infoLst.Count + " rows parsed in " + (DateTime.Now - startTime).TotalSeconds + " seconds");
 
-                // startTime = DateTime.Now;
+                startTime = DateTime.Now;
                 rutLst = Process.readRutFilteringFile("../../TestData/ruts.txt");
                 Console.WriteLine("File with " + rutLst.Count + " ruts parsed in " + (DateTime.Now - startTime).TotalSeconds + " seconds");
 
+                startTime = DateTime.Now;
+                filteredList = Process.filterInformation(infoLst, rutLst);
                 // startTime = DateTime.Now;
                 // infoLst = Process.readInformationFile("TestData/IFIN016202004F29_50K_7.txt");
                 // Console.WriteLine("File with " + infoLst.Count + " rows parsed in " + (DateTime.Now - startTime).TotalSeconds + "seconds");
@@ -49,7 +51,9 @@ namespace F29FilteringApp
                 // Console.WriteLine("File with " + infoLst.Count + " rows parsed in " + (DateTime.Now - startTime).TotalSeconds + "seconds");
             
                 // infoLst.ForEach(Console.WriteLine);
-                rutLst.ForEach(Console.WriteLine);
+                // rutLst.ForEach(Console.WriteLine);
+                filteredList.ForEach(Console.WriteLine);
+                Console.WriteLine(filteredList.Count);
             }
             catch (IOException e)
             {

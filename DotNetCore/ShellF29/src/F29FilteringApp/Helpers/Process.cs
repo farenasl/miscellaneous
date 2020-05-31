@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using F29FilteringApp.models;
+using System.Linq;
 
 namespace F29FilteringApp.helpers
 {
@@ -32,6 +33,13 @@ namespace F29FilteringApp.helpers
             return lst;
         }
 
+        public static Rut setRut(string[] rut) {
+            return new Rut() {
+                Value = Convert.ToInt64(rut[0])
+                , Digit = rut[1]
+            };
+        }
+
         public static List<Information> readInformationFile(string filePath) {
             var lst = new List<Information>();
 
@@ -49,7 +57,7 @@ namespace F29FilteringApp.helpers
                                 Acronym = mainLine[0]
                                 , Name = "Formulario " + mainLine[0]
                             }
-                            , Rut = mainLine[1]
+                            , Rut = setRut(mainLine[1].Split('-'))
                             , Period = mainLine[2]
                             , Invoice = Convert.ToInt64(mainLine[3])
                             , ValuePairs = getPairList(mainLine[4].Split("|"))
@@ -71,6 +79,13 @@ namespace F29FilteringApp.helpers
                     });
 
             return lst;
+        }
+
+        public static List<Information> filterInformation(List<Information> infoLst, List<Rut> rutLst) {
+            List<Information> result = 
+                infoLst.Where(item => rutLst.Any(rut => rut.Value.Equals(item.Rut.Value))).ToList();
+
+            return result;
         }
     }
 }
