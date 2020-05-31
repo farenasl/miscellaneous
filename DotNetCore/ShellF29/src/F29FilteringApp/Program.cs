@@ -16,7 +16,7 @@ namespace F29FilteringApp
             try
             {
                 DateTime startTime = DateTime.Now;
-                infoLst = Process.readInformationFile("../TestData/25-regs.txt");
+                infoLst = Process.readInformationFile("../../TestData/25-regs.txt");
                 Console.WriteLine("File with " + infoLst.Count + " rows parsed in " + (DateTime.Now - startTime).TotalSeconds + "seconds");
 
                 // startTime = DateTime.Now;
