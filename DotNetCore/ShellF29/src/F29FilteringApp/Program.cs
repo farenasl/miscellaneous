@@ -12,12 +12,17 @@ namespace F29FilteringApp
         {
             // Console.WriteLine("Hello World!");
             List<Information> infoLst;
+            List<Rut> rutLst;
 
             try
             {
                 DateTime startTime = DateTime.Now;
-                infoLst = Process.readInformationFile("../../TestData/25-regs.txt");
-                Console.WriteLine("File with " + infoLst.Count + " rows parsed in " + (DateTime.Now - startTime).TotalSeconds + "seconds");
+                // infoLst = Process.readInformationFile("../../TestData/25-regs.txt");
+                // Console.WriteLine("File with " + infoLst.Count + " rows parsed in " + (DateTime.Now - startTime).TotalSeconds + " seconds");
+
+                // startTime = DateTime.Now;
+                rutLst = Process.readRutFilteringFile("../../TestData/ruts.txt");
+                Console.WriteLine("File with " + rutLst.Count + " ruts parsed in " + (DateTime.Now - startTime).TotalSeconds + " seconds");
 
                 // startTime = DateTime.Now;
                 // infoLst = Process.readInformationFile("TestData/IFIN016202004F29_50K_7.txt");
@@ -42,14 +47,15 @@ namespace F29FilteringApp
                 // startTime = DateTime.Now;
                 // infoLst = Process.readInformationFile("TestData/IFIN016202004F29.txt");
                 // Console.WriteLine("File with " + infoLst.Count + " rows parsed in " + (DateTime.Now - startTime).TotalSeconds + "seconds");
+            
+                // infoLst.ForEach(Console.WriteLine);
+                rutLst.ForEach(Console.WriteLine);
             }
             catch (IOException e)
             {
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
-
-            // infoLst.ForEach(Console.WriteLine);
         }
     }
 }

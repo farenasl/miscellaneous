@@ -15,6 +15,5 @@ namespace F29FilteringApp
             get { return name; }
             set { name = value; }
         }
-        
     }
 }

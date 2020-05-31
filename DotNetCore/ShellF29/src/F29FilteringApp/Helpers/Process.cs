@@ -59,5 +59,18 @@ namespace F29FilteringApp.helpers
 
             return lst;
         }
+ 
+        public static List<Rut> readRutFilteringFile(string filePath) {
+            var lst = new List<Rut>();
+
+            using (StreamReader sr = new StreamReader(filePath))
+                while (sr.Peek() >= 0)
+                    lst.Add(new Rut()
+                    {
+                        Value = Convert.ToInt64(sr.ReadLine())
+                    });
+
+            return lst;
+        }
     }
 }
