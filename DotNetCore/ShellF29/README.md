@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> This is a .NET Core app to filter the tributary F29 information provided by Chilean SII
+> This is a .NET Core app to filter the tributary F29 information contained in CTE provided by Chilean SII
 
 ## Install
 
@@ -26,7 +26,7 @@ dotnet run
 ## Run tests
 
 ```sh
-No unit-test included by moment ... sorry :-P
+dotnet test
 ```
 
 ## Author
