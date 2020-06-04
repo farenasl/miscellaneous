@@ -2,11 +2,10 @@ using System;
 
 namespace F29FilteringApp
 {
-    [Serializable]
     public class ValuePair
     {
-        private String code;
-        public String Code
+        private Int32 code;
+        public Int32 Code
         {
             get { return code; }
             set { code = value; }

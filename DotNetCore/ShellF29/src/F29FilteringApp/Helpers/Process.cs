@@ -17,7 +17,7 @@ namespace F29FilteringApp.helpers
             {
                 if (!specificFormat) {
                     lst.Add(new ValuePair(){
-                        Code = line[i]
+                        Code = Convert.ToInt32(line[i])
                         , Value = line[i + 1] + " | " + line[i + 2]
                     });
                     ++i;
@@ -25,7 +25,7 @@ namespace F29FilteringApp.helpers
                 }
                 else
                     lst.Add(new ValuePair(){
-                        Code = line[i]
+                        Code = Convert.ToInt32(line[i])
                         , Value = line[i + 1]
                     });
             }
