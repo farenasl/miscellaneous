@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/F29FilteringApp/bin/Debug/netcoreapp3.1/F29FilteringApp.dll",
+            "program": "${workspaceFolder}/src/F29FilteringApp/bin/Debug/netcoreapp3.1/F29FilteringApp.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/F29FilteringApp",
+            "cwd": "${workspaceFolder}/src/F29FilteringApp",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
