@@ -18,7 +18,7 @@ namespace F29FilteringApp
 
             try
             {
-                WebBrowser.OpenBrowser("https://www.google.cl/");
+                WebBrowser.OpenBrowser("WebTemplates/index.html");
                 DateTime startTime = DateTime.Now;
                 // infoLst = Process.readInformationFile("../../TestData/25-regs.txt");
                 infoLst = Process.readInformationFile("../../TestData/IFIN016202004F29.txt");
