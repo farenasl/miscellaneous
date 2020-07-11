@@ -14,13 +14,21 @@ namespace F29FilteringApp
             List<Information> infoLst, filteredList;
             List<Rut> rutLst;
 
-            
+            if (args.Length == 0){
+                try
+                {
+                    WebBrowser.OpenBrowser("WebTemplates/index.html");
+                }
+                catch (System.Exception e)
+                {
+                    Console.WriteLine("Not able to open web-browser");
+                    Console.WriteLine(e.Message);
+                }
+            }
 
             try
             {
-                WebBrowser.OpenBrowser("WebTemplates/index.html");
                 DateTime startTime = DateTime.Now;
-                // infoLst = Process.readInformationFile("../../TestData/25-regs.txt");
                 infoLst = Process.readInformationFile("../../TestData/IFIN016202004F29.txt");
                 Console.WriteLine("Incoming text file with " + infoLst.Count + " valid rows parsed in " + (DateTime.Now - startTime).TotalSeconds + " seconds");
 
@@ -39,7 +47,7 @@ namespace F29FilteringApp
             }
             catch (IOException e)
             {
-                Console.WriteLine("The file could not be read:");
+                Console.WriteLine("The files could not be read:");
                 Console.WriteLine(e.Message);
             }
         }
