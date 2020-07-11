@@ -13,19 +13,7 @@ namespace F29FilteringApp
             // Console.WriteLine("Hello World!");
             List<Information> infoLst, filteredList;
             List<Rut> rutLst;
-
-            if (args.Length == 0){
-                try
-                {
-                    WebBrowser.OpenBrowser("WebTemplates/index.html");
-                }
-                catch (System.Exception e)
-                {
-                    Console.WriteLine("Not able to open web-browser");
-                    Console.WriteLine(e.Message);
-                }
-            }
-
+            
             try
             {
                 DateTime startTime = DateTime.Now;
