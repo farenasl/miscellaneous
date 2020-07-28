@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TextFinder.helpers
 {
@@ -41,9 +42,9 @@ namespace TextFinder.helpers
                     var element = item.Split(" ");
                     if (element[8].Equals("[DataMartClient]")){
                         if (element[9].Equals("[generarSuscripcion]"))
-                            finalLst.Add("ERROR GENERANDO SUBSCRIPCION: " + element[6] + " --- " + element[0] + " " + element[1]);
+                            finalLst.Add(element[0] + " " + element[1] + " " + element[6] + " --- ERROR GENERANDO SUBSCRIPCION");
                         else if (element[9].Equals("[verificarSuscripcion]"))
-                            finalLst.Add("ERROR VERIFICANDO SUBSCRIPCION: " + element[6] + " --- " + element[0] + " " + element[1]);
+                            finalLst.Add(element[0] + " " + element[1] + " " + element[6] + " --- ERROR VERIFICANDO SUBSCRIPCION");
                     } 
                 }
 
@@ -56,6 +57,7 @@ namespace TextFinder.helpers
                 throw ex;
             }
             finally {
+                finalLst.OrderBy(x => x.Split(" --- ")[1]).ToList();
                 finalLst.ForEach(Console.WriteLine);
             }
         }
