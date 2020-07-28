@@ -19,5 +19,25 @@ namespace TextFinder.helpers
 
             return lst;
         }
+
+        public static void filterInformation(List<String> lst) {
+            try
+            {
+                lst.RemoveAll(row => row.Split(" ") == null || row.Split(" ").Length < 3);
+                lst.RemoveAll(row => row.Split(" ")[2] != "ERROR");
+
+                
+
+                Console.WriteLine("Logradas: " + lst.Count.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally {
+                lst.ForEach(Console.WriteLine);
+            }
+        }
     }
 }
