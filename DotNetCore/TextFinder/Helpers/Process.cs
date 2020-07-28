@@ -6,6 +6,15 @@ namespace TextFinder.helpers
 {
     public class Process
     {
+        public static List<String> readInformationFiles(List<String> filePaths) {
+            var lst = new List<String>();
+
+            foreach (var filePath in filePaths)
+                lst.AddRange(readInformationFile(filePath));
+
+            return lst;
+        }
+
         public static List<String> readInformationFile(string filePath) {
             var lst = new List<String>();
 
