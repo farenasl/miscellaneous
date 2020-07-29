@@ -7,7 +7,11 @@ namespace TextFinder.helpers
 {
     public class Process
     {
-        public static List<String> readInformationFiles(List<String> filePaths) {
+        public static String[] getFilesInFolder(String folderName) {
+            return Directory.GetFiles("TestData/" + folderName + "/", "*.txt");
+        }
+
+        public static List<String> readInformationFiles(String[] filePaths) {
             var lst = new List<String>();
 
             foreach (var filePath in filePaths)
@@ -19,7 +23,7 @@ namespace TextFinder.helpers
         public static List<String> readInformationFile(string filePath) {
             var lst = new List<String>();
 
-            using (StreamReader sr = new StreamReader("TestData/" + filePath))
+            using (StreamReader sr = new StreamReader(filePath))
             {
                 while (sr.Peek() >= 0)
                 {
