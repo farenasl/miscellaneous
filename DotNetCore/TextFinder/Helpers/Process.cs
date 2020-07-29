@@ -19,7 +19,7 @@ namespace TextFinder.helpers
         public static List<String> readInformationFile(string filePath) {
             var lst = new List<String>();
 
-            using (StreamReader sr = new StreamReader(filePath))
+            using (StreamReader sr = new StreamReader("TestData/" + filePath))
             {
                 while (sr.Peek() >= 0)
                 {
