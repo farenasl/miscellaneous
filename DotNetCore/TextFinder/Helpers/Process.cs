@@ -2,6 +2,9 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Globalization;
+using TextFinder.constants;
+using TextFinder.models;
 
 namespace TextFinder.helpers
 {
@@ -33,27 +36,34 @@ namespace TextFinder.helpers
 
             return lst;
         }
-
+    
         public static void filterInformation(List<String> lst) {
-            List<String> finalLst = new List<String>();
+            List<Error> errorLst = new List<Error>();
+            List<String> lstRut = new List<String>();
+            int errorCount = 0;
             try
             {
                 lst.RemoveAll(row => row.Split(" ") == null || row.Split(" ").Length < 3);
                 lst.RemoveAll(row => row.Split(" ")[2] != "ERROR");
+                lst.RemoveAll(row => new[] {FlowType.HabilitadoresPyme, FlowType.BCICore}.Any(ft => row.Split(" ")[8].Contains(ft)));
 
-                foreach (var item in lst)
-                {
+                foreach (var item in lst) {
                     var element = item.Split(" ");
-                    if (element[8].Equals("[DataMartClient]")){
-                        if (element[9].Equals("[generarSuscripcion]"))
-                            finalLst.Add(element[0] + " " + element[1] + " " + element[6] + " --- ERROR GENERANDO SUBSCRIPCION");
-                        else if (element[9].Equals("[verificarSuscripcion]"))
-                            finalLst.Add(element[0] + " " + element[1] + " " + element[6] + " --- ERROR VERIFICANDO SUBSCRIPCION");
+                    if (element[8].Equals(FlowType.DataMart)) {
+                        errorCount++;
+                        saveRut(lstRut, element[6]);
+                        errorLst.Add(new Error(){
+                            Rut = element[6]
+                            , FechaHora = DateTime.ParseExact(element[0] + " " + element[1], "yyyy-MM-dd HH:mm:ss,fff", CultureInfo.InvariantCulture)
+                            , TipoError = element[9]
+                        });
                     } 
                 }
 
-                Console.WriteLine("Logradas: " + lst.Count.ToString());
-                Console.WriteLine("Errores: " + finalLst.Count.ToString());
+                Console.WriteLine("Total de intentos con error: " + errorLst.Count.ToString());
+                Console.WriteLine("Error Subscripciones: " + errorLst.FindAll(e => e.TipoError == ErrorType.GenerateSubscription).Count);
+                Console.WriteLine("Error Validaciones: " + errorLst.FindAll(e => e.TipoError == ErrorType.ValidateSubscription).Count);
+                Console.WriteLine("Cantidad de ruts únicos consultados: " + lstRut.Count);
             }
             catch (System.Exception ex)
             {
@@ -61,9 +71,22 @@ namespace TextFinder.helpers
                 throw ex;
             }
             finally {
-                finalLst.OrderBy(x => x.Split(" --- ")[1]).ToList();
-                finalLst.ForEach(Console.WriteLine);
+                errorLst.OrderBy(e => e.FechaHora).ToList();
+                errorLst.ForEach(Console.WriteLine);
             }
+        }
+
+        public static bool isNewRut(List<String> lst, String rut) {
+            foreach (var item in lst)
+                if (item == rut)
+                    return false;
+
+            return true;
+        }
+
+        public static void saveRut(List<String> lst, String rut) {
+            if (isNewRut(lst, rut))
+                lst.Add(rut);
         }
     }
 }
