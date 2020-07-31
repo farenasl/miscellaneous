@@ -39,8 +39,7 @@ namespace TextFinder.helpers
     
         public static void filterInformation(List<String> lst) {
             List<Error> errorLst = new List<Error>();
-            List<String> lstRut = new List<String>();
-            int errorCount = 0;
+
             try
             {
                 lst.RemoveAll(row => row.Split(" ") == null || row.Split(" ").Length < 3);
@@ -50,8 +49,6 @@ namespace TextFinder.helpers
                 foreach (var item in lst) {
                     var element = item.Split(" ");
                     if (element[8].Equals(FlowType.DataMart)) {
-                        errorCount++;
-                        saveRut(lstRut, element[6]);
                         errorLst.Add(new Error(){
                             Rut = element[6]
                             , FechaHora = DateTime.ParseExact(element[0] + " " + element[1], "yyyy-MM-dd HH:mm:ss,fff", CultureInfo.InvariantCulture)
@@ -63,7 +60,7 @@ namespace TextFinder.helpers
                 Console.WriteLine("Total de intentos con error: " + errorLst.Count.ToString());
                 Console.WriteLine("Error Subscripciones: " + errorLst.FindAll(e => e.TipoError == ErrorType.GenerateSubscription).Count);
                 Console.WriteLine("Error Validaciones: " + errorLst.FindAll(e => e.TipoError == ErrorType.ValidateSubscription).Count);
-                Console.WriteLine("Cantidad de ruts únicos consultados: " + lstRut.Count);
+                Console.WriteLine("Cantidad de ruts únicos consultados: " + errorLst.GroupBy(t => t.Rut).Count());
             }
             catch (System.Exception ex)
             {
@@ -74,19 +71,6 @@ namespace TextFinder.helpers
                 errorLst.OrderBy(e => e.FechaHora).ToList();
                 errorLst.ForEach(Console.WriteLine);
             }
-        }
-
-        public static bool isNewRut(List<String> lst, String rut) {
-            foreach (var item in lst)
-                if (item == rut)
-                    return false;
-
-            return true;
-        }
-
-        public static void saveRut(List<String> lst, String rut) {
-            if (isNewRut(lst, rut))
-                lst.Add(rut);
         }
     }
 }
