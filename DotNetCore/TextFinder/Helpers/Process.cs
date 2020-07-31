@@ -68,8 +68,7 @@ namespace TextFinder.helpers
                 throw ex;
             }
             finally {
-                errorLst.OrderBy(e => e.FechaHora).ToList();
-                errorLst.ForEach(Console.WriteLine);
+                errorLst.OrderBy(e => e.FechaHora).ToList().ForEach(Console.WriteLine);
             }
         }
     }

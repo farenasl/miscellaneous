@@ -8,7 +8,7 @@ namespace TextFinder
     {
         static void Main(string[] args)
         {
-            String[] filePaths = Process.getFilesInFolder("20200727");
+            String[] filePaths = Process.getFilesInFolder("20200729");
             List<String> infoLst = Process.readInformationFiles(filePaths);
             Process.filterInformation(infoLst);
         }
