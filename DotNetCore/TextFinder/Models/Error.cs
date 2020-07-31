@@ -16,7 +16,7 @@ namespace TextFinder.models
         public DateTime FechaHora { get; set; }
 
         public override String ToString() {
-            return FechaHora.ToString() + " " + TipoError + " " + Rut;
+            return FechaHora.ToString("yyyy-MM-dd HH:mm:ss,fff") + " " + TipoError + " " + Rut;
         }
         
     }
