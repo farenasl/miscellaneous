@@ -10,12 +10,18 @@ namespace TextFinder.models
             get { return rut; }
             set { rut = value.Replace("[", String.Empty).Replace("]", String.Empty); }
         }
-        
-        public String TipoError { get; set; }
+
         public DateTime FechaHora { get; set; }
 
+        public String Method { get; set; }
+
+        public String URL { get; set; }
+
+        public String TipoError { get; set; }
+        
+
         public override String ToString() {
-            return FechaHora.ToString("yyyy-MM-dd HH:mm:ss,fff") + " " + TipoError + " " + Rut;
+            return FechaHora.ToString("yyyy-MM-dd HH:mm:ss,fff") + " " + TipoError + " " + Rut + " [" + Method + "] " + URL;
         }
         
     }
