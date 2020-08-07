@@ -49,13 +49,13 @@ namespace TextFinder.helpers
                 foreach (var item in lst) {
                     var element = item.Split(" ");
                     if (element[8].Equals(FlowType.DataMart)) {
-                        Console.WriteLine(element[6]);
                         errorLst.Add(new Error(){
                             Rut = element[6]
                             , FechaHora = DateTime.ParseExact(element[0] + " " + element[1], "yyyy-MM-dd HH:mm:ss,fff", CultureInfo.InvariantCulture)
                             , Method = (element[9] == ErrorType.GenerateSubscription ? MethodType.POST : MethodType.GET)
                             , URL = getSpecificError(element)
                             , TipoError = element[9]
+                            , ErrorText = getErrorText(item)
                         });
                     } 
                 }
@@ -86,6 +86,13 @@ namespace TextFinder.helpers
                 return "https://api.datamart.cl/cte/v1/subscriptions/97006000-6/" + element[6].Replace("[", string.Empty).Replace("]", string.Empty);
             else
                 return string.Empty;
+        }
+
+        public static String getErrorText(String item) {
+            // if (item.Split(" ")[11] == ErrorType.BusinessError)
+            //     return "Not Known Error: It could be TimeOut, API response message error, etc ...";
+            // else
+                return item.Substring(34);
         }
     }
 }

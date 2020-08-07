@@ -6,5 +6,6 @@ namespace TextFinder.constants
     {
         public const String GenerateSubscription = "[generarSuscripcion]";
         public const String ValidateSubscription = "[verificarSuscripcion]";
+        public const String BusinessError = "[ErrorNegocioException]";
     }
 }

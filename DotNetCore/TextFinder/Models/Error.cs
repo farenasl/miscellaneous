@@ -19,9 +19,10 @@ namespace TextFinder.models
 
         public String TipoError { get; set; }
         
+        public String ErrorText { get; set; }
 
         public override String ToString() {
-            return FechaHora.ToString("yyyy-MM-dd HH:mm:ss,fff") + " " + TipoError + " " + Rut + " [" + Method + "] " + URL;
+            return FechaHora.ToString("yyyy-MM-dd HH:mm:ss,fff") + " " + TipoError + " " + Rut + " [" + Method + "] " + URL + " | " + ErrorText;
         }
         
     }
