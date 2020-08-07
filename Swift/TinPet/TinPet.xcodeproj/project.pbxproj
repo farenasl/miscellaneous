@@ -99,10 +99,11 @@
 		4F65326824D7AB0B0003AC88 /* TinPet */ = {
 			isa = PBXGroup;
 			children = (
+				4FD9293A24DA09C4009024A4 /* Models */,
+				4FD9293C24DA09F9009024A4 /* Controllers */,
+				4FD9293B24DA09F3009024A4 /* Views */,
 				4F65326924D7AB0B0003AC88 /* AppDelegate.swift */,
 				4F65326B24D7AB0B0003AC88 /* SceneDelegate.swift */,
-				4F65326D24D7AB0B0003AC88 /* ViewController.swift */,
-				4F65326F24D7AB0B0003AC88 /* Main.storyboard */,
 				4F65327224D7AB150003AC88 /* Assets.xcassets */,
 				4F65327424D7AB150003AC88 /* LaunchScreen.storyboard */,
 				4F65327724D7AB150003AC88 /* Info.plist */,
@@ -126,6 +127,29 @@
 				4F65328D24D7AB160003AC88 /* Info.plist */,
 			);
 			path = TinPetUITests;
+			sourceTree = "<group>";
+		};
+		4FD9293A24DA09C4009024A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4FD9293B24DA09F3009024A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F65326F24D7AB0B0003AC88 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4FD9293C24DA09F9009024A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F65326D24D7AB0B0003AC88 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
