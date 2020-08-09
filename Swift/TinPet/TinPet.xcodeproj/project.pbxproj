@@ -15,6 +15,8 @@
 		4F65327624D7AB150003AC88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F65327424D7AB150003AC88 /* LaunchScreen.storyboard */; };
 		4F65328124D7AB160003AC88 /* TinPetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65328024D7AB160003AC88 /* TinPetTests.swift */; };
 		4F65328C24D7AB160003AC88 /* TinPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F65328B24D7AB160003AC88 /* TinPetUITests.swift */; };
+		4FD92A3324DEDD7F009024A4 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FD92A3224DEDD7F009024A4 /* CHANGELOG.md */; };
+		4FD92A3524DEDDF0009024A4 /* ToDo in Resources */ = {isa = PBXBuildFile; fileRef = 4FD92A3424DEDDF0009024A4 /* ToDo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		4F65328724D7AB160003AC88 /* TinPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F65328B24D7AB160003AC88 /* TinPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinPetUITests.swift; sourceTree = "<group>"; };
 		4F65328D24D7AB160003AC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD92A3224DEDD7F009024A4 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		4FD92A3424DEDDF0009024A4 /* ToDo */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		4F65325D24D7AB0B0003AC88 = {
 			isa = PBXGroup;
 			children = (
+				4FD92A3424DEDDF0009024A4 /* ToDo */,
+				4FD92A3224DEDD7F009024A4 /* CHANGELOG.md */,
 				4F65326824D7AB0B0003AC88 /* TinPet */,
 				4F65327F24D7AB160003AC88 /* TinPetTests */,
 				4F65328A24D7AB160003AC88 /* TinPetUITests */,
@@ -105,7 +111,6 @@
 				4F65326924D7AB0B0003AC88 /* AppDelegate.swift */,
 				4F65326B24D7AB0B0003AC88 /* SceneDelegate.swift */,
 				4F65327224D7AB150003AC88 /* Assets.xcassets */,
-				4F65327424D7AB150003AC88 /* LaunchScreen.storyboard */,
 				4F65327724D7AB150003AC88 /* Info.plist */,
 			);
 			path = TinPet;
@@ -139,6 +144,7 @@
 		4FD9293B24DA09F3009024A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F65327424D7AB150003AC88 /* LaunchScreen.storyboard */,
 				4F65326F24D7AB0B0003AC88 /* Main.storyboard */,
 			);
 			path = Views;
@@ -257,8 +263,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F65327624D7AB150003AC88 /* LaunchScreen.storyboard in Resources */,
+				4FD92A3524DEDDF0009024A4 /* ToDo in Resources */,
 				4F65327324D7AB150003AC88 /* Assets.xcassets in Resources */,
 				4F65327124D7AB0B0003AC88 /* Main.storyboard in Resources */,
+				4FD92A3324DEDD7F009024A4 /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
