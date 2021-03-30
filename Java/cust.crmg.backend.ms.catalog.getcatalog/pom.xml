@@ -28,7 +28,7 @@
 		<jacoco.version>0.8.5</jacoco.version>
 		<commons-collections.version>3.2.2</commons-collections.version>
 		<commons-beanutils.version>1.9.4</commons-beanutils.version>
-		<guava.version>28.1-jre</guava.version>
+		<guava.version>29.0-jre</guava.version>
 		<plexus.version>3.3.0</plexus.version>
 		<jackson.version>2.10.5.1</jackson.version>
 		<xercesImpl.version>2.12.0</xercesImpl.version>
