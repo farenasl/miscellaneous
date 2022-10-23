@@ -5,3 +5,4 @@
 .LSOverride
 Java/demo/bin
 .gradle/buildOutputCleanup/
+DotNetCore/ShellF29FilteringApp/obj/*
