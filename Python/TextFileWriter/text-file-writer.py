@@ -6,5 +6,5 @@ for x in range(1,100001):
 f.close()
 
 #open and read the file after the appending:
-#f = open("simple-text-file.txt", "r")
-#print(f.read())
+f = open("simple-text-file.txt", "r")
+print(f.read())
