@@ -11,13 +11,17 @@ In example if the saved voucher represents the twelfth transaction of the month 
 the file will be saved inside of the folder 2025 with the name 03_12.pdf
 
 # Problem
-By mistake I performed some transactions in the 1st day of February, but I saved the vouchers as January vouchers
+By mistake I performed some transactions in the 1<sup>st</sup> day of February, but I saved the vouchers as January vouchers
 
 # Reaction
 After manually fixed 3 of these wrongly named files, I decided to create a shell script to practice and do it automatically 
 
 # Actions
 * Create a shell script
+* Give it execution permits
+    ```
+    % chmod 755 script.sh
+    ```
 * Localize the execution path in the corresponding folder (path hardcoded if it's not provided as argument for the execution)
 * List all files with wrong name (filters applied to avoid properly named files)
 * Use command move (**mv**) to rename the files with the corresponding name
