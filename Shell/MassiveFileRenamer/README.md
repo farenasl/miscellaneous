@@ -29,8 +29,8 @@ __*first column renamed as original incorrect name*__
 
 __*second column renamed as final correct name*__
 
-|Conversion            |
-------------------------
+|Conversion                    |
+:------------------------------:
 |01_34.pdf renamed as 02_03.pdf|
 |01_35.pdf renamed as 02_04.pdf|
 |01_36.pdf renamed as 02_05.pdf|
