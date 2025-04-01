@@ -23,6 +23,7 @@ dotnet remove package Microsoft.Office.Interop.Excel
 
 # Pre-requisites
 * dotnet sdk 7.0
+* ClosedXML library
 
 # Execute the code
 `````
