@@ -31,6 +31,11 @@ dotnet run
 `````
 
 # Execute in a container 
+Remove everything previously created
+`````
+docker system prune -a
+`````
+
 Build docker image using Dockerfile
 `````
 docker build -t rac:v1 .
