@@ -20,7 +20,6 @@ namespace ReadinessAssessmentConsolidator
 
             Array.ForEach(files, ProcessExcelData);
 
-            //put file folder name as part of args and then read all excel files inside
             string filePath = "excelFiles/BMA Technology Readiness Survey - Fabian Arenas.xlsx";
 
             int rowCounter = 1;
@@ -28,7 +27,6 @@ namespace ReadinessAssessmentConsolidator
             List<ExcelDataModel> feedback = new();
 
             using (var workbook = new XLWorkbook(filePath)){
-                //add worksheet names as an argument also
                 var worksheet = workbook.Worksheet("BNE DC");
 
                 //foreach (var row in worksheet.Rows())
