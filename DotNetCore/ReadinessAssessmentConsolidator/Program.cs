@@ -1,4 +1,5 @@
 ﻿using ClosedXML.Excel;
+using System.IO;
 
 using ReadinessAssessmentConsolidator.models;
 
@@ -9,6 +10,15 @@ namespace ReadinessAssessmentConsolidator
         static void Main(string[] args)
         {
             Console.WriteLine("Starting the Readiness Assessment Consolidator program!!");
+
+            Console.WriteLine("Reading all excels inside of excelFiles folder");
+            Console.WriteLine("Only files with the extension XLSX will be considered");
+
+            string[] files = Directory.GetFiles("excelFiles/", "*.xlsx");
+            Console.WriteLine("We have found " + files.Length + " Excel files to process");
+            // Array.ForEach(files, Console.WriteLine);
+
+            Array.ForEach(files, ProcessExcelData);
 
             //put file folder name as part of args and then read all excel files inside
             string filePath = "excelFiles/BMA Technology Readiness Survey - Fabian Arenas.xlsx";
@@ -174,6 +184,11 @@ namespace ReadinessAssessmentConsolidator
             wb.SaveAs("excelFiles/BMA_Technology_Readiness_Survey_Consolidated.xlsx");
 
             Console.WriteLine("Ending the Readiness Assessment Consolidator program!!");
+        }
+
+        private static void ProcessExcelData(string file){
+            Console.WriteLine("Starting processing file " + file);
+            Console.WriteLine("End processing file " + file);
         }
     }
 }
