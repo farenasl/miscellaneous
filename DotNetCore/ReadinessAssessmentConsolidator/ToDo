@@ -1,0 +1,11 @@
+# MVP1
+[x] Generate project
+[x] Read data from more than one excel sheets
+[x] Consolidate in just one file associating names
+[x] Dockerize solution to allow other people use it
+
+# MVP2
+[x] Take all excels inside of the specific folder
+[] Put template colums and rows inside of final document
+[] Process all worksheets automatically
+[] Instruction sheet please remove
