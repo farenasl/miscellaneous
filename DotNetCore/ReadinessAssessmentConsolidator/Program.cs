@@ -667,8 +667,11 @@ namespace ReadinessAssessmentConsolidator
             ws.Cell(1, 1).InsertData(feedback6);
             ws = wb.Worksheets.Add("SARAJI STH");
             ws.Cell(1, 1).InsertData(feedback7);
-            // wb.SaveAs("excelFiles/BMA Technology Readiness Survey - Consolidated.xlsx");
-            wb.SaveAs("results/BMA_Technology_Readiness_Survey_Consolidated_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".xlsx");
+            
+            String dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+            wb.SaveAs("results/BMA_Technology_Readiness_Survey_Consolidated_" + dateTime + ".xlsx");
+
+            Console.WriteLine("File BMA_Technology_Readiness_Survey_Consolidated_" + dateTime + ".xlsx generated successfully!");
         }
     }
 }
