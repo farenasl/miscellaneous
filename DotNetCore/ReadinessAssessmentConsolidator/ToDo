@@ -9,7 +9,8 @@
 [x] Process all workbooks automatically inside of the specific folder
 [x] Process all worksheets automatically
 [x] Instruction sheet please remove
-[] Put template colums and rows inside of final document
+[x] Put template colums and rows inside of final document
+[] Solve issue about excel results
 
 # MVP3
 [] Skip rows with no data
