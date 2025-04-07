@@ -146,6 +146,7 @@ namespace ReadinessAssessmentConsolidator
                         DataColumn1 = worksheet.Row(3).Cell(1).GetString(),
                         DataColumn2 = worksheet.Row(3).Cell(2).GetString(),
                     });
+                    feedback1.Add(new ExcelDataModel());
                     break;
                 case "GOONYELLA":
                     feedback2.Add(new ExcelDataModel()
@@ -165,6 +166,7 @@ namespace ReadinessAssessmentConsolidator
                         DataColumn1 = worksheet.Row(3).Cell(1).GetString(),
                         DataColumn2 = worksheet.Row(3).Cell(2).GetString(),
                     });
+                    feedback2.Add(new ExcelDataModel());
                     break;
                 case "BROADMEADOW":
                     feedback3.Add(new ExcelDataModel()
@@ -184,6 +186,7 @@ namespace ReadinessAssessmentConsolidator
                         DataColumn1 = worksheet.Row(3).Cell(1).GetString(),
                         DataColumn2 = worksheet.Row(3).Cell(2).GetString(),
                     });
+                    feedback3.Add(new ExcelDataModel());
                     break;
                 case "CAVAL RIDGE":
                     feedback4.Add(new ExcelDataModel()
@@ -203,6 +206,7 @@ namespace ReadinessAssessmentConsolidator
                         DataColumn1 = worksheet.Row(3).Cell(1).GetString(),
                         DataColumn2 = worksheet.Row(3).Cell(2).GetString(),
                     });
+                    feedback4.Add(new ExcelDataModel());
                     break;
                 case "PEAK DOWNS":
                     feedback5.Add(new ExcelDataModel()
@@ -222,6 +226,7 @@ namespace ReadinessAssessmentConsolidator
                         DataColumn1 = worksheet.Row(3).Cell(1).GetString(),
                         DataColumn2 = worksheet.Row(3).Cell(2).GetString(),
                     });
+                    feedback5.Add(new ExcelDataModel());
                     break;
                 case "SARAJI":
                     feedback6.Add(new ExcelDataModel()
@@ -241,6 +246,7 @@ namespace ReadinessAssessmentConsolidator
                         DataColumn1 = worksheet.Row(3).Cell(1).GetString(),
                         DataColumn2 = worksheet.Row(3).Cell(2).GetString(),
                     });
+                    feedback6.Add(new ExcelDataModel());
                     break;
                 case "SARAJI STH":
                     feedback7.Add(new ExcelDataModel()
@@ -260,6 +266,7 @@ namespace ReadinessAssessmentConsolidator
                         DataColumn1 = worksheet.Row(3).Cell(1).GetString(),
                         DataColumn2 = worksheet.Row(3).Cell(2).GetString(),
                     });
+                    feedback7.Add(new ExcelDataModel());
                     break;
                 default:
                     break;
@@ -272,7 +279,7 @@ namespace ReadinessAssessmentConsolidator
                 switch (worksheet.Name)
                 {
                     case "BNE DC":
-                        if (row.RowNumber() == 4 || row.RowNumber() == 11 || row.RowNumber() == 13 || row.RowNumber() == 18
+                        if (row.RowNumber() == 11 || row.RowNumber() == 13 || row.RowNumber() == 18
                         || row.RowNumber() == 20 || row.RowNumber() == 25 || row.RowNumber() == 27
                         || row.RowNumber() == 33 || row.RowNumber() == 35 || row.RowNumber() == 43
                         || row.RowNumber() == 45 || row.RowNumber() == 55 || row.RowNumber() == 57
