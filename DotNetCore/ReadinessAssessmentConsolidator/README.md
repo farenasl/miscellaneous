@@ -22,8 +22,11 @@ dotnet remove package Microsoft.Office.Interop.Excel
 * https://stackoverflow.com/questions/22049212/copying-files-from-docker-container-to-host
 
 # Pre-requisites
-* dotnet sdk 7.0
+* dotnet sdk 9.0
 * ClosedXML library
+* results folder at the same level of binaries
+* excelFiles folder with all excel files to consolidate
+* The excel files **must** to have the same and specific format. Any modification will cause this program to fail
 
 # Execute the code
 `````
@@ -50,5 +53,5 @@ dotnet cp <container_id>:<container_file_full_path> <local_path>
 `````
 Example
 `````
-docker cp a0bab273c2ed:/app/excelFiles/BMA_Technology_Readiness_Survey_Consolidated.xlsx . 
+docker cp a0bab273c2ed:/app/results/BMA_Technology_Readiness_Survey_Consolidated_2025_0407_230016.xlsx . 
 `````
