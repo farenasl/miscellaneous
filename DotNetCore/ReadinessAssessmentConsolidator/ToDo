@@ -10,7 +10,7 @@
 [x] Process all worksheets automatically
 [x] Instruction sheet please remove
 [x] Put template colums and rows inside of final document
-[] Solve issue about excel results
+[x] Solve issue about missing or overlapped rows in results workbook
 
 # MVP3
 [] Skip rows with no data
