@@ -5,12 +5,20 @@
 [x] Dockerize solution to allow other people use it
 
 # MVP2
-[x] Take all excels inside of the specific folder
-[] Put template colums and rows inside of final document
-[] Process all worksheets automatically
-[] Instruction sheet please remove
+[x] Validate not to include existing consolidated file
+[x] Process all workbooks automatically inside of the specific folder
+[x] Process all worksheets automatically
+[x] Instruction sheet please remove
+[x] Put template colums and rows inside of final document
+[x] Solve issue about missing or overlapped rows in results workbook
 
 # MVP3
+[] Skip rows with no data
+[] Handle all worksheets with information dynamically
+[] Put final row number as an argument also (used in rowCounter)
+[] Add style to the excelsheet
+
+# MVP4
 [] Put folder name as part of args and then read all excel files inside
 [] Add worksheet names as an argument also (it could be 1 or more)
-[] Put final row number as an argument also (used in rowCounter)
+
