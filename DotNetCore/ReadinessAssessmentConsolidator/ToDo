@@ -16,9 +16,11 @@
 [] Skip rows with no data
 [] Handle all worksheets with information dynamically
 [] Put final row number as an argument also (used in rowCounter)
-[] Add style to the excelsheet
+[x] Add style to the excelsheet
 
 # MVP4
 [] Put folder name as part of args and then read all excel files inside
 [] Add worksheet names as an argument also (it could be 1 or more)
-
+[] Fix README.md file
+[] Sort out code
+[] Excel files in repository are corrupt, fix this.
