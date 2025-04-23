@@ -655,23 +655,128 @@ namespace ReadinessAssessmentConsolidator
             var wb = new XLWorkbook();
             var ws = wb.Worksheets.Add("BNE DC");
             ws.Cell(1, 1).InsertData(feedback1);
+            AddStyle(ws);
             ws = wb.Worksheets.Add("GOONYELLA");
             ws.Cell(1, 1).InsertData(feedback2);
+            AddStyle(ws);
             ws = wb.Worksheets.Add("BROADMEADOW");
             ws.Cell(1, 1).InsertData(feedback3);
+            AddStyle(ws);
             ws = wb.Worksheets.Add("CAVAL RIDGE");
             ws.Cell(1, 1).InsertData(feedback4);
+            AddStyle(ws);
             ws = wb.Worksheets.Add("PEAK DOWNS");
             ws.Cell(1, 1).InsertData(feedback5);
+            AddStyle(ws);
             ws = wb.Worksheets.Add("SARAJI");
             ws.Cell(1, 1).InsertData(feedback6);
+            AddStyle(ws);
             ws = wb.Worksheets.Add("SARAJI STH");
             ws.Cell(1, 1).InsertData(feedback7);
+            AddStyle(ws);
             
             String dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
             wb.SaveAs("results/BMA_Technology_Readiness_Survey_Consolidated_" + dateTime + ".xlsx");
 
             Console.WriteLine("File BMA_Technology_Readiness_Survey_Consolidated_" + dateTime + ".xlsx generated successfully!");
+        }
+
+        private static void AddStyle(IXLWorksheet worksheet)
+        {
+            Console.WriteLine("Adding Styling to " + worksheet.Name + " excel sheet.");
+
+            // General
+            worksheet.Style.Font.FontName = "Arial";
+            worksheet.Style.Font.FontSize = 10;
+            worksheet.SheetView.ZoomScale = 60;
+            worksheet.Column(1).Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
+            worksheet.Column(3).Width = 30;
+            worksheet.Column(4).Width = 100;
+            worksheet.Column(5).Width = 100;
+
+            // Bolding
+            worksheet.Range("A1:E3").Style.Font.Bold = true;
+            worksheet.Column(1).Style.Font.Bold = true;
+            worksheet.Cell(12, 2).Style.Font.Bold = true;
+            worksheet.Cell(19, 2).Style.Font.Bold = true;
+            worksheet.Cell(26, 2).Style.Font.Bold = true;
+            worksheet.Cell(34, 2).Style.Font.Bold = true;
+            worksheet.Cell(44, 2).Style.Font.Bold = true;
+            worksheet.Cell(56, 2).Style.Font.Bold = true;
+            worksheet.Cell(65, 2).Style.Font.Bold = true;
+            worksheet.Cell(75, 2).Style.Font.Bold = true;
+            worksheet.Cell(85, 2).Style.Font.Bold = true;
+            
+            // Setting colors
+            worksheet.Range("A1:E1").Style.Fill.BackgroundColor = XLColor.HunterGreen;
+            worksheet.Range("A2:B2").Style.Fill.BackgroundColor = XLColor.LightGreen;
+            worksheet.Cell(2, 3).Style.Fill.BackgroundColor = XLColor.LightBlue;
+            worksheet.Range("D2:E2").Style.Fill.BackgroundColor = XLColor.Blue;
+            worksheet.Range("C2:E2").Style.Font.FontColor = XLColor.White;
+
+            // Gray rows
+            worksheet.Range("A3:E3").Style.Fill.BackgroundColor = XLColor.LightGray;
+            worksheet.Range("A12:E12").Style.Fill.BackgroundColor = XLColor.LightGray;
+            worksheet.Range("A19:E19").Style.Fill.BackgroundColor = XLColor.LightGray;
+            worksheet.Range("A26:E26").Style.Fill.BackgroundColor = XLColor.LightGray;
+            worksheet.Range("A34:E34").Style.Fill.BackgroundColor = XLColor.LightGray;
+            worksheet.Range("A44:E44").Style.Fill.BackgroundColor = XLColor.LightGray;
+            worksheet.Range("A56:E56").Style.Fill.BackgroundColor = XLColor.LightGray;
+            worksheet.Range("A65:E65").Style.Fill.BackgroundColor = XLColor.LightGray;
+            worksheet.Range("A75:E75").Style.Fill.BackgroundColor = XLColor.LightGray;
+            worksheet.Range("A85:E85").Style.Fill.BackgroundColor = XLColor.LightGray;
+
+            // Black rows
+            worksheet.Range("A11:E11").Style.Fill.BackgroundColor = XLColor.Black;
+            worksheet.Range("A18:E18").Style.Fill.BackgroundColor = XLColor.Black;
+            worksheet.Range("A25:E25").Style.Fill.BackgroundColor = XLColor.Black;
+            worksheet.Range("A33:E33").Style.Fill.BackgroundColor = XLColor.Black;
+            worksheet.Range("A43:E43").Style.Fill.BackgroundColor = XLColor.Black;
+            worksheet.Range("A55:E55").Style.Fill.BackgroundColor = XLColor.Black;
+            worksheet.Range("A64:E64").Style.Fill.BackgroundColor = XLColor.Black;
+            worksheet.Range("A74:E74").Style.Fill.BackgroundColor = XLColor.Black;
+            worksheet.Range("A84:E84").Style.Fill.BackgroundColor = XLColor.Black;
+            worksheet.Range("A93:E93").Style.Fill.BackgroundColor = XLColor.Black;
+
+            // Hidden rows
+            worksheet.Row(4).Hide();
+            worksheet.Row(13).Hide();
+            worksheet.Row(20).Hide();
+            worksheet.Row(27).Hide();
+            worksheet.Row(35).Hide();
+            worksheet.Row(45).Hide();
+            worksheet.Row(57).Hide();
+            worksheet.Row(66).Hide();
+            worksheet.Row(76).Hide();
+            worksheet.Row(86).Hide();
+
+            // Wrapped questions
+            worksheet.Column(2).Style.Alignment.WrapText = true;
+            worksheet.Column(3).Style.Alignment.WrapText = true;
+            worksheet.Column(4).Style.Alignment.WrapText = true;
+            worksheet.Column(5).Style.Alignment.WrapText = true;
+            worksheet.Column(2).Width = 70;
+
+            // Merging content
+            worksheet.Range("B3:E3").Merge();
+            worksheet.Range("B12:E12").Merge();
+            worksheet.Range("B19:E19").Merge();
+            worksheet.Range("B26:E26").Merge();
+            worksheet.Range("B34:E34").Merge();
+            worksheet.Range("B44:E44").Merge();
+            worksheet.Range("B56:E56").Merge();
+            worksheet.Range("B65:E65").Merge();
+            worksheet.Range("B75:E75").Merge();
+            worksheet.Range("B85:E85").Merge();
+
+            // Header Row
+            var row = worksheet.Row(1);
+            row.Style.Font.FontColor = XLColor.White;
+            row.Style.Font.FontSize = 20;
+            row.Style.Font.Bold = true;
+
+            worksheet.Column(1).AdjustToContents();
+            worksheet.Column(3).AdjustToContents();
         }
     }
 }
