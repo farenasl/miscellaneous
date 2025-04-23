@@ -1,16 +1,7 @@
-Install ClosedXML support into the project
-ClosedXML allows the project to work with MS Office documents like excels, words, powerpoints, etc
+# Introduction
+This is not more than a simple Excel data consolidator that consider an static structure to consolidate input data from different Excel files that contains the same structure
 
-````
-dotnet add package ClosedXML
-````
-
-Remove packages from the project
-`````
-dotnet remove package Microsoft.Office.Interop.Excel
-`````
-
-# Resourced used to develop this.
+# Resources used to develop this.
 ## Development
 * https://www.youtube.com/watch?v=-jCLDGXwY4k
 * https://stackoverflow.com/questions/52927/console-writeline-and-generic-list
@@ -28,6 +19,22 @@ dotnet remove package Microsoft.Office.Interop.Excel
 * excelFiles folder with all excel files to consolidate
 * The excel files **must** to have the same and specific format. Any modification will cause this program to fail
 
+Install ClosedXML support into the project
+ClosedXML allows the project to work with MS Office documents like excels, words, powerpoints, etc
+
+````
+dotnet add package ClosedXML
+````
+
+Remove packages from the project
+`````
+dotnet remove package Microsoft.Office.Interop.Excel
+`````
+# Build the code
+`````
+dotnet build
+`````
+
 # Execute the code
 `````
 dotnet run
@@ -38,20 +45,19 @@ Remove everything previously created
 `````
 docker system prune -a
 `````
-
 Build docker image using Dockerfile
 `````
 docker build -t rac:v1 .
 `````
 Execute the docker container with container's console-view mode on
 `````
-dotnet run -it rac:v1
+docker run -it rac:v1
 `````
 Extract the result file from the container to the local machine
 `````
-dotnet cp <container_id>:<container_file_full_path> <local_path>
+docker cp <container_id>:<container_file_full_path> <local_path>
 `````
 Example
 `````
-docker cp a0bab273c2ed:/app/results/BMA_Technology_Readiness_Survey_Consolidated_2025_0407_230016.xlsx . 
+docker cp bff1f2ec66d0:/app/results/BMA_Technology_Readiness_Survey_Consolidated_20250422_185657.xlsx . 
 `````
