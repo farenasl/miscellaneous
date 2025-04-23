@@ -1,5 +1,8 @@
 # Introduction
-This is not more than a simple Excel data consolidator app. This app consider an static structure to consolidate data inside of different Excel files and then, generate a results file with all information consolidated in just one file. 
+This is not more than a simple Excel data consolidator app. This app consider an static structure to consolidate data from different Excel files and then, generate a results file with all information consolidated in just one file.
+
+**This project was made based on the structure used for the BMA Pilot, any change on the structure of the files to consolidate will cause the program to fail.
+Future version could consider dynamic structures and error handling.**
 
 # End-User execution
 ## Pre-Requirements
@@ -8,7 +11,7 @@ This is not more than a simple Excel data consolidator app. This app consider an
  
 # Execute the application in your local machine
 * Unzip downloaded file
-* Go to the path **ReadinessAssessment/publish/**
+* Go to the path **ReadinessAssessmentConsolidator v1.0/win-x64/publish/**
 * Paste all the excel files that you want to consolidate inside of the folder **excelFiles**
 * Double-click over the executable **ReadinessAssessmentConsolidator.exe**
 
