@@ -21,6 +21,7 @@
 # MVP4
 [] Add timers to evaluate performance of the app
 [] Sort out code (Refactor)
+[] Add unit testing
 [] Skip if excelFiles folder is empty
 [] Put folder name as part of args and then read all excel files inside
 [] Add worksheet names as an argument also (it could be 1 or more)
