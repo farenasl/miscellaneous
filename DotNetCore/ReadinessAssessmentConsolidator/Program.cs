@@ -300,9 +300,9 @@ namespace ReadinessAssessmentConsolidator
                             {
                                 DataColumn1 = row.Cell(1).GetString(),
                                 DataColumn2 = row.Cell(2).GetString(),
-                                DataColumn3 = associatedUser + ": " + row.Cell(3).GetString(),
-                                DataColumn4 = associatedUser + ": " + row.Cell(4).GetString(),
-                                DataColumn5 = associatedUser + ": " + row.Cell(5).GetString()
+                                DataColumn3 = (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() : String.Empty),
+                                DataColumn4 = (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() : String.Empty),
+                                DataColumn5 = (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() : String.Empty)
                             });
                         break;
                     case "GOONYELLA":
@@ -327,9 +327,9 @@ namespace ReadinessAssessmentConsolidator
                             {
                                 DataColumn1 = row.Cell(1).GetString(),
                                 DataColumn2 = row.Cell(2).GetString(),
-                                DataColumn3 = associatedUser + ": " + row.Cell(3).GetString(),
-                                DataColumn4 = associatedUser + ": " + row.Cell(4).GetString(),
-                                DataColumn5 = associatedUser + ": " + row.Cell(5).GetString()
+                                DataColumn3 = (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() : String.Empty),
+                                DataColumn4 = (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() : String.Empty),
+                                DataColumn5 = (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() : String.Empty)
                             });
                         break;
                     case "BROADMEADOW":
@@ -354,9 +354,9 @@ namespace ReadinessAssessmentConsolidator
                             {
                                 DataColumn1 = row.Cell(1).GetString(),
                                 DataColumn2 = row.Cell(2).GetString(),
-                                DataColumn3 = associatedUser + ": " + row.Cell(3).GetString(),
-                                DataColumn4 = associatedUser + ": " + row.Cell(4).GetString(),
-                                DataColumn5 = associatedUser + ": " + row.Cell(5).GetString()
+                                DataColumn3 = (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() : String.Empty),
+                                DataColumn4 = (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() : String.Empty),
+                                DataColumn5 = (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() : String.Empty)
                             });
                         break;
                     case "CAVAL RIDGE":
@@ -381,9 +381,9 @@ namespace ReadinessAssessmentConsolidator
                             {
                                 DataColumn1 = row.Cell(1).GetString(),
                                 DataColumn2 = row.Cell(2).GetString(),
-                                DataColumn3 = associatedUser + ": " + row.Cell(3).GetString(),
-                                DataColumn4 = associatedUser + ": " + row.Cell(4).GetString(),
-                                DataColumn5 = associatedUser + ": " + row.Cell(5).GetString()
+                                DataColumn3 = (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() : String.Empty),
+                                DataColumn4 = (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() : String.Empty),
+                                DataColumn5 = (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() : String.Empty)
                             });
                         break;
                     case "PEAK DOWNS":
@@ -408,9 +408,9 @@ namespace ReadinessAssessmentConsolidator
                             {
                                 DataColumn1 = row.Cell(1).GetString(),
                                 DataColumn2 = row.Cell(2).GetString(),
-                                DataColumn3 = associatedUser + ": " + row.Cell(3).GetString(),
-                                DataColumn4 = associatedUser + ": " + row.Cell(4).GetString(),
-                                DataColumn5 = associatedUser + ": " + row.Cell(5).GetString()
+                                DataColumn3 = (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() : String.Empty),
+                                DataColumn4 = (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() : String.Empty),
+                                DataColumn5 = (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() : String.Empty)
                             });
                         break;
                     case "SARAJI":
@@ -435,9 +435,9 @@ namespace ReadinessAssessmentConsolidator
                             {
                                 DataColumn1 = row.Cell(1).GetString(),
                                 DataColumn2 = row.Cell(2).GetString(),
-                                DataColumn3 = associatedUser + ": " + row.Cell(3).GetString(),
-                                DataColumn4 = associatedUser + ": " + row.Cell(4).GetString(),
-                                DataColumn5 = associatedUser + ": " + row.Cell(5).GetString()
+                                DataColumn3 = (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() : String.Empty),
+                                DataColumn4 = (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() : String.Empty),
+                                DataColumn5 = (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() : String.Empty)
                             });
                         break;
                     case "SARAJI STH":
@@ -462,9 +462,9 @@ namespace ReadinessAssessmentConsolidator
                             {
                                 DataColumn1 = row.Cell(1).GetString(),
                                 DataColumn2 = row.Cell(2).GetString(),
-                                DataColumn3 = associatedUser + ": " + row.Cell(3).GetString(),
-                                DataColumn4 = associatedUser + ": " + row.Cell(4).GetString(),
-                                DataColumn5 = associatedUser + ": " + row.Cell(5).GetString()
+                                DataColumn3 = (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() : String.Empty),
+                                DataColumn4 = (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() : String.Empty),
+                                DataColumn5 = (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() : String.Empty)
                             });
                         break;
                     default:
@@ -495,9 +495,9 @@ namespace ReadinessAssessmentConsolidator
                             continue;
                         }
 
-                        feedback1[rowCounter].DataColumn3 += "\n" + associatedUser + ": " + row.Cell(3).GetString();
-                        feedback1[rowCounter].DataColumn4 += "\n" + associatedUser + ": " + row.Cell(4).GetString();
-                        feedback1[rowCounter].DataColumn5 += "\n" + associatedUser + ": " + row.Cell(5).GetString();
+                        feedback1[rowCounter].DataColumn3 += (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() + "\n" : String.Empty);
+                        feedback1[rowCounter].DataColumn4 += (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() + "\n" : String.Empty);
+                        feedback1[rowCounter].DataColumn5 += (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() + "\n" : String.Empty);
                         rowCounter++;
                     }
                     break;
@@ -519,9 +519,9 @@ namespace ReadinessAssessmentConsolidator
                             continue;
                         }
 
-                        feedback2[rowCounter].DataColumn3 += "\n" + associatedUser + ": " + row.Cell(3).GetString();
-                        feedback2[rowCounter].DataColumn4 += "\n" + associatedUser + ": " + row.Cell(4).GetString();
-                        feedback2[rowCounter].DataColumn5 += "\n" + associatedUser + ": " + row.Cell(5).GetString();
+                        feedback2[rowCounter].DataColumn3 += (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() + "\n" : String.Empty);
+                        feedback2[rowCounter].DataColumn4 += (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() + "\n" : String.Empty);
+                        feedback2[rowCounter].DataColumn5 += (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() + "\n" : String.Empty);
                         rowCounter++;
                     }
                     break;
@@ -543,9 +543,9 @@ namespace ReadinessAssessmentConsolidator
                             continue;
                         }
 
-                        feedback3[rowCounter].DataColumn3 += "\n" + associatedUser + ": " + row.Cell(3).GetString();
-                        feedback3[rowCounter].DataColumn4 += "\n" + associatedUser + ": " + row.Cell(4).GetString();
-                        feedback3[rowCounter].DataColumn5 += "\n" + associatedUser + ": " + row.Cell(5).GetString();
+                        feedback3[rowCounter].DataColumn3 += (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() + "\n" : String.Empty);
+                        feedback3[rowCounter].DataColumn4 += (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() + "\n" : String.Empty);
+                        feedback3[rowCounter].DataColumn5 += (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() + "\n" : String.Empty);
                         rowCounter++;
                     }
                     break;
@@ -567,9 +567,9 @@ namespace ReadinessAssessmentConsolidator
                             continue;
                         }
 
-                        feedback4[rowCounter].DataColumn3 += "\n" + associatedUser + ": " + row.Cell(3).GetString();
-                        feedback4[rowCounter].DataColumn4 += "\n" + associatedUser + ": " + row.Cell(4).GetString();
-                        feedback4[rowCounter].DataColumn5 += "\n" + associatedUser + ": " + row.Cell(5).GetString();
+                        feedback4[rowCounter].DataColumn3 += (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() + "\n" : String.Empty);
+                        feedback4[rowCounter].DataColumn4 += (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() + "\n" : String.Empty);
+                        feedback4[rowCounter].DataColumn5 += (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() + "\n" : String.Empty);
                         rowCounter++;
                     }
                     break;
@@ -591,9 +591,9 @@ namespace ReadinessAssessmentConsolidator
                             continue;
                         }
 
-                        feedback5[rowCounter].DataColumn3 += "\n" + associatedUser + ": " + row.Cell(3).GetString();
-                        feedback5[rowCounter].DataColumn4 += "\n" + associatedUser + ": " + row.Cell(4).GetString();
-                        feedback5[rowCounter].DataColumn5 += "\n" + associatedUser + ": " + row.Cell(5).GetString();
+                        feedback5[rowCounter].DataColumn3 += (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() + "\n" : String.Empty);
+                        feedback5[rowCounter].DataColumn4 += (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() + "\n" : String.Empty);
+                        feedback5[rowCounter].DataColumn5 += (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() + "\n" : String.Empty);
                         rowCounter++;
                     }
                     break;
@@ -615,9 +615,9 @@ namespace ReadinessAssessmentConsolidator
                             continue;
                         }
 
-                        feedback6[rowCounter].DataColumn3 += "\n" + associatedUser + ": " + row.Cell(3).GetString();
-                        feedback6[rowCounter].DataColumn4 += "\n" + associatedUser + ": " + row.Cell(4).GetString();
-                        feedback6[rowCounter].DataColumn5 += "\n" + associatedUser + ": " + row.Cell(5).GetString();
+                        feedback6[rowCounter].DataColumn3 += (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() + "\n" : String.Empty);
+                        feedback6[rowCounter].DataColumn4 += (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() + "\n" : String.Empty);
+                        feedback6[rowCounter].DataColumn5 += (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() + "\n" : String.Empty);
                         rowCounter++;
                     }
                     break;
@@ -639,9 +639,9 @@ namespace ReadinessAssessmentConsolidator
                             continue;
                         }
 
-                        feedback7[rowCounter].DataColumn3 += "\n" + associatedUser + ": " + row.Cell(3).GetString();
-                        feedback7[rowCounter].DataColumn4 += "\n" + associatedUser + ": " + row.Cell(4).GetString();
-                        feedback7[rowCounter].DataColumn5 += "\n" + associatedUser + ": " + row.Cell(5).GetString();
+                        feedback7[rowCounter].DataColumn3 += (row.Cell(3).GetString() != String.Empty ? associatedUser + ": " + row.Cell(3).GetString() + "\n" : String.Empty);
+                        feedback7[rowCounter].DataColumn4 += (row.Cell(4).GetString() != String.Empty ? associatedUser + ": " + row.Cell(4).GetString() + "\n" : String.Empty);
+                        feedback7[rowCounter].DataColumn5 += (row.Cell(5).GetString() != String.Empty ? associatedUser + ": " + row.Cell(5).GetString() + "\n" : String.Empty);
                         rowCounter++;
                     }
                     break;
@@ -690,9 +690,13 @@ namespace ReadinessAssessmentConsolidator
             worksheet.Style.Font.FontSize = 10;
             worksheet.SheetView.ZoomScale = 60;
             worksheet.Column(1).Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
+            worksheet.Column(2).Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
             worksheet.Column(3).Width = 30;
             worksheet.Column(4).Width = 100;
             worksheet.Column(5).Width = 100;
+            worksheet.Column(3).Style.Alignment.Vertical = XLAlignmentVerticalValues.Top;
+            worksheet.Column(4).Style.Alignment.Vertical = XLAlignmentVerticalValues.Top;
+            worksheet.Column(5).Style.Alignment.Vertical = XLAlignmentVerticalValues.Top;
 
             // Bolding
             worksheet.Range("A1:E3").Style.Font.Bold = true;
