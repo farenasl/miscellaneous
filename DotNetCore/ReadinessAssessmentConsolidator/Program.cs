@@ -33,6 +33,8 @@ namespace ReadinessAssessmentConsolidator
             SavingConsolidatedExcel();
 
             Console.WriteLine("Ending the Readiness Assessment Consolidator program!!");
+            Console.WriteLine("Press any key to close the program...");
+            Console.ReadKey();
         }
 
         private static void ProcessExcel(String filePath)
