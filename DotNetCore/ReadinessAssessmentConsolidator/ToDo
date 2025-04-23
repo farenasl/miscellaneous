@@ -14,11 +14,14 @@
 
 # MVP3
 [x] Skip rows with no data
-[] Fix README.md file
-[] Sort out code (Refactor)
 [x] Add style to the excelsheet
+[x] Press a key to close the program
+[x] Fix README.md file
 
 # MVP4
+[] Add timers to evaluate performance of the app
+[] Sort out code (Refactor)
+[] Skip if excelFiles folder is empty
 [] Put folder name as part of args and then read all excel files inside
 [] Add worksheet names as an argument also (it could be 1 or more)
 [] Excel files in repository are corrupt, fix this.

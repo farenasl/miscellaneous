@@ -1,24 +1,43 @@
 # Introduction
-This is not more than a simple Excel data consolidator that consider an static structure to consolidate input data from different Excel files that contains the same structure
+This is not more than a simple Excel data consolidator app. This app consider an static structure to consolidate data inside of different Excel files and then, generate a results file with all information consolidated in just one file. 
 
-# Resources used to develop this.
-## Development
+# End-User execution
+## Pre-Requirements
+* Operative System: Windows x64
+* [Download executable file](https://mysite.bhpbilliton.com/:u:/g/personal/fabian_arenas_bhp_com/EfbsGopFDg5NhpwspIO6zXEBYIIjiQWWOxD9Kf_ZC9Weug?e=3rDwEH)
+ 
+# Execute the application in your local machine
+* Unzip downloaded file
+* Go to the path **ReadinessAssessment/publish/**
+* Paste all the excel files that you want to consolidate inside of the folder **excelFiles**
+* Double-click over the executable **ReadinessAssessmentConsolidator.exe**
+
+# Development resources
+## Resources used to develop this.
+### Software Development
 * https://www.youtube.com/watch?v=-jCLDGXwY4k
 * https://stackoverflow.com/questions/52927/console-writeline-and-generic-list
 * https://stackoverflow.com/questions/17321958/listcustom-to-excel-c-sharp
+* https://github.com/ClosedXML/ClosedXML
 
 ## Dockerization
 * https://www.youtube.com/watch?v=BrKeO_Ubsr4
 * https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md
 * https://stackoverflow.com/questions/22049212/copying-files-from-docker-container-to-host
 
-# Pre-requisites
+## Publication
+* https://blog.magnusmontin.net/2019/09/22/single-file-exes-in-net-core/
+
+# Development Pre-requisites
 * dotnet sdk 9.0
 * ClosedXML library
+* Docker Desktop (only in case you want to run this in a docker container)
 * results folder at the same level of binaries
 * excelFiles folder with all excel files to consolidate
-* The excel files **must** to have the same and specific format. Any modification will cause this program to fail
+* The excel files **must** to have the same and specific format. Any modification will cause this program to fail and errors are not getting handled
 
+# How-To
+## Manage packages of the project
 Install ClosedXML support into the project
 ClosedXML allows the project to work with MS Office documents like excels, words, powerpoints, etc
 
@@ -30,21 +49,28 @@ Remove packages from the project
 `````
 dotnet remove package Microsoft.Office.Interop.Excel
 `````
-# Build the code
+
+## Build the code
 `````
 dotnet build
 `````
 
-# Execute the code
+## Execute the code
 `````
 dotnet run
 `````
 
-# Execute in a container 
+# Manage Docker Containers/Images 
 Remove everything previously created
 `````
 docker system prune -a
 `````
+
+List containers deployed in your local machine
+`````
+docker ps -a
+`````
+
 Build docker image using Dockerfile
 `````
 docker build -t rac:v1 .
