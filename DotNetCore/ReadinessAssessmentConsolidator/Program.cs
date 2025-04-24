@@ -25,13 +25,12 @@ namespace ReadinessAssessmentConsolidator
             string[] files = Directory.GetFiles("excelFiles/", "*.xlsx");
 
             Console.WriteLine("We have found " + files.Length + " Excel files to process");
-            // Array.ForEach(files, Console.WriteLine);
 
-            Array.ForEach(files, ProcessExcel);
-
-            //feedback.ForEach(i => Console.Write("{0}\n", i));
-
-            SavingConsolidatedExcel();
+            if (files.Length != 0)
+            {
+                Array.ForEach(files, ProcessExcel);
+                SavingConsolidatedExcel();
+            }            
 
             Console.WriteLine("Ending the Readiness Assessment Consolidator program!!");
             Console.WriteLine("Press any key to close the program...");
