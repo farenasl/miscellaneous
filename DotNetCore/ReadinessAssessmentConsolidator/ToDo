@@ -23,6 +23,8 @@
 [] Sort out code (Refactor)
 [] Add unit testing
 [x] Skip if excelFiles folder is empty
+
+# MVP5
 [] Add worksheet names as an argument also (it could be 1 or more)
 [] Excel files in repository are corrupt, fix this.
 [] Handle all worksheets with information dynamically
