@@ -19,7 +19,7 @@
 [x] Fix README.md file
 
 # MVP4
-[] Add timers to evaluate performance of the app
+[x] Add timers to evaluate performance of the app
 [] Sort out code (Refactor)
 [] Add unit testing
 [x] Skip if excelFiles folder is empty

@@ -15,10 +15,11 @@ namespace ReadinessAssessmentConsolidator
         private static List<ExcelDataModel> feedback5 = new();
         private static List<ExcelDataModel> feedback6 = new();
         private static List<ExcelDataModel> feedback7 = new();
+        private static DateTime startTime = DateTime.Now, endTime;
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Starting the Readiness Assessment Consolidator program!!");
+            Console.WriteLine("Starting the Readiness Assessment Consolidator program at " + startTime.ToString("HH:mm:ss"));
             Console.WriteLine("Reading all excels inside of excelFiles folder");
             Console.WriteLine("Only files with the extension XLSX will be considered");
 
@@ -32,7 +33,8 @@ namespace ReadinessAssessmentConsolidator
                 SavingConsolidatedExcel();
             }            
 
-            Console.WriteLine("Ending the Readiness Assessment Consolidator program!!");
+            Console.WriteLine("Ending the Readiness Assessment Consolidator program at " + endTime.ToString("HH:mm:ss"));
+            Console.WriteLine(files.Length + " files processed in " + endTime.Subtract(startTime).TotalSeconds + " seconds");
             Console.WriteLine("Press any key to close the program...");
             Console.ReadKey();
         }
@@ -579,10 +581,10 @@ namespace ReadinessAssessmentConsolidator
             ws.Cell(1, 1).InsertData(feedback7);
             ExcelStylistHelper.AddStyle(ws);
             
-            String dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            wb.SaveAs("results/BMA_Technology_Readiness_Survey_Consolidated_" + dateTime + ".xlsx");
+            endTime = DateTime.Now;
+            wb.SaveAs("results/BMA_Technology_Readiness_Survey_Consolidated_" + endTime.ToString("yyyyMMdd_HHmmss") + ".xlsx");
 
-            Console.WriteLine("File BMA_Technology_Readiness_Survey_Consolidated_" + dateTime + ".xlsx generated successfully!");
+            Console.WriteLine("File BMA_Technology_Readiness_Survey_Consolidated_" + endTime.ToString("yyyyMMdd_HHmmss") + ".xlsx generated successfully!");
         }
 
         
