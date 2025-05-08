@@ -20,7 +20,7 @@
 
 # MVP4
 [x] Add timers to evaluate performance of the app
-[] Sort out code (Refactor)
+[x] Sort out code (Refactor)
 [] Add unit testing
 [x] Skip if excelFiles folder is empty
 
