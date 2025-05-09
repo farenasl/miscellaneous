@@ -64,6 +64,11 @@ dotnet build
 dotnet run
 `````
 
+## Generate executable binary
+`````
+dotnet publish -r win-x64 -c release /p:PublishSingleFile=true
+`````
+
 # Manage Docker Containers/Images 
 Remove everything previously created
 `````
