@@ -22,7 +22,7 @@
     "jsonwebtoken": ">=9.0.0",
     "log4js": "^6.1.0",
     "moment": "^2.24.0",
-    "multer": ">=2.0.2",
+    "multer": ">=2.1.1",
     "node-cache": "^5.1.0",
     "nodemon": "^2.0.2",
     "pg": "^7.18.2",
