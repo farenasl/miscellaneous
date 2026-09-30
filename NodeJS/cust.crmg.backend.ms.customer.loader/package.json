@@ -10,7 +10,7 @@
     "test": "jest --coverage --runInBand --detectOpenHandles"
   },
   "dependencies": {
-    "axios": "1.18.0",
+    "axios": "^1.20.0",
     "body-parser": ">=1.20.6",
     "convert-excel-to-json": "^1.6.1",
     "cors": "^2.8.5",
@@ -18,14 +18,14 @@
     "dotenv": "^8.2.0",
     "express": ">=4.20.0",
     "http-errors": "1.7.3",
-    "jest": "^25.1.0",
+    "jest": "^30.5.2",
     "jsonwebtoken": ">=9.0.0",
     "log4js": "^6.1.0",
     "moment": "^2.24.0",
     "multer": ">=2.3.0",
     "node-cache": "^5.1.0",
     "nodemon": "^2.0.2",
-    "pg": "^7.18.2",
+    "pg": "^8.23.1",
     "supertest": "^4.0.2"
   },
   "jest": {
