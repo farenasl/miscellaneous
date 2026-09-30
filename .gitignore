@@ -7,3 +7,9 @@ Java/demo/bin
 .gradle/buildOutputCleanup/
 DotNetCore/ShellF29FilteringApp/obj/*
 Unity/MyFirstGame/Library/*
+
+# Java files
+target/
+
+# NodeJS files
+node_modules/
